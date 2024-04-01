@@ -9,6 +9,16 @@ public class Main {
 	public static void main(String[] args) {
 		
 		System.out.println("Hello world!");
+		
+		BinaryTreeLL binaryTree = initializeTree();
+		binaryTree.preOrder(binaryTree.root);
+
+		
+	}
+	
+	
+	private static BinaryTreeLL initializeTree(){
+		
 		BinaryTreeLL binaryTree = new BinaryTreeLL();
 		BinaryNode n1 = new BinaryNode();
 		n1.value = "N1";
@@ -44,8 +54,7 @@ public class Main {
 		
 		binaryTree.root = n1;
 		
-		binaryTree.preOrder(binaryTree.root);
-		
-		
+		return binaryTree;
+	
 	}
 }
