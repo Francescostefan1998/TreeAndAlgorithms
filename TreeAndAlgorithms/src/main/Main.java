@@ -16,6 +16,8 @@ public class Main {
 		binaryTree.inOrder(binaryTree.root);
 		System.out.println(" ");
 		binaryTree.postOrder(binaryTree.root);
+		System.out.println(" ");
+		binaryTree.levelOrder();
 
 
 	}
