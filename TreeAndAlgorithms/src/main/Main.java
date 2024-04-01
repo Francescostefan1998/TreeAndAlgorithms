@@ -12,8 +12,9 @@ public class Main {
 		
 		BinaryTreeLL binaryTree = initializeTree();
 		binaryTree.preOrder(binaryTree.root);
+		System.out.println(" ");
+		binaryTree.inOrder(binaryTree.root);
 
-		
 	}
 	
 	
