@@ -20,7 +20,10 @@ public class Main {
 		binaryTree.levelOrder();
 		System.out.println(" ");
 		binaryTree.search("N5");
-
+		binaryTree.insert("N10");
+		binaryTree.insert("N11");
+		binaryTree.levelOrder();
+		System.out.println(" ");
 	}
 	
 	
