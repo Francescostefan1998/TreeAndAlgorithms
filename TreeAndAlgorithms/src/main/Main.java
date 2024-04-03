@@ -8,8 +8,6 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		System.out.println("Hello world!");
-		
 		BinaryTreeLL binaryTree = initializeTree();
 		binaryTree.preOrder(binaryTree.root);
 		System.out.println(" ");
@@ -22,6 +20,13 @@ public class Main {
 		binaryTree.search("N5");
 		binaryTree.insert("N10");
 		binaryTree.insert("N11");
+		binaryTree.levelOrder();
+		System.out.println(" ");
+		System.out.println(binaryTree.getDeepestNode().value);
+		binaryTree.deleteDeepestNode();
+		binaryTree.levelOrder();
+		System.out.println(" ");
+		binaryTree.deleteNode("N5");
 		binaryTree.levelOrder();
 		System.out.println(" ");
 	}
