@@ -73,4 +73,15 @@ public class BinaryTree {
 		return -1;
 	}
 	
+	public void delete(String value) {
+		int location = search(value);
+		if(location == -1) {
+			return;
+		} else {
+			arr[location] = arr[lastUsedIndex];
+			lastUsedIndex--;
+			System.out.println("The node successfully deleted");
+		}
+	}
+	
 }
