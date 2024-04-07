@@ -57,5 +57,11 @@ public class BinaryTree {
 		System.out.print(arr[index] + " ");
 	}
 	
+	public void levelOrder() {
+		for(int i = 1; i <= lastUsedIndex; i++)
+			System.out.print(arr[i] + " ");
+		
+	}
+	
 	
 }
