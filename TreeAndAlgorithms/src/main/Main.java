@@ -43,6 +43,8 @@ public class Main {
 		System.out.println();
 		bt.levelOrder();
 		System.out.println();
+		bt.search("N12");
+		System.out.println();
 		
 	}
 	

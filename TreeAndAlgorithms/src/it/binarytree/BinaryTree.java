@@ -60,8 +60,17 @@ public class BinaryTree {
 	public void levelOrder() {
 		for(int i = 1; i <= lastUsedIndex; i++)
 			System.out.print(arr[i] + " ");
-		
 	}
 	
+	public int search(String value) {
+		for(int i = 1; i <= lastUsedIndex; i++) {
+			if(arr[i] == value) {
+				System.out.println(value + " exists at the locaiton of "+ i);
+				return i;
+			}
+		}
+		System.out.println(value + " does not exists in binary Tree" );
+		return -1;
+	}
 	
 }
