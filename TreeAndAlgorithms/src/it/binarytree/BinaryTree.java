@@ -38,4 +38,15 @@ public class BinaryTree {
 		preOrder(index * 2 + 1);
 	}
 	
+	
+	public void inOrder(int index) {
+		if(index > lastUsedIndex) {
+			return;
+		}
+		inOrder(index * 2);
+		System.out.print(arr[index] + " ");
+		inOrder(index * 2 + 1);
+	}
+	
+	
 }

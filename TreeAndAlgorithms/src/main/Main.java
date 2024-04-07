@@ -37,6 +37,8 @@ public class Main {
 		System.out.println();
 		bt.preOrder(1);
 		System.out.println();
+		bt.inOrder(1);
+		System.out.println();
 
 	}
 	
