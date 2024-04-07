@@ -48,5 +48,14 @@ public class BinaryTree {
 		inOrder(index * 2 + 1);
 	}
 	
+	public void postOrder(int index) {
+		if(index > lastUsedIndex) {
+			return;
+		}
+		postOrder(2*index);
+		postOrder(2* index +1);
+		System.out.print(arr[index] + " ");
+	}
+	
 	
 }
