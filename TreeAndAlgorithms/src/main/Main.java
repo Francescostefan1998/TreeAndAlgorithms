@@ -11,40 +11,46 @@ public class Main {
 		
 		BinaryTreeLL binaryTree = initializeTreeLL();
 		binaryTree.preOrder(binaryTree.root);
-		System.out.println(" ");
+		System.out.println();
 		binaryTree.inOrder(binaryTree.root);
-		System.out.println(" ");
+		System.out.println();
 		binaryTree.postOrder(binaryTree.root);
-		System.out.println(" ");
+		System.out.println();
 		binaryTree.levelOrder();
-		System.out.println(" ");
+		System.out.println();
 		binaryTree.search("N5");
 		binaryTree.insert("N10");
 		binaryTree.insert("N11");
 		binaryTree.levelOrder();
-		System.out.println(" ");
+		System.out.println();
 		System.out.println(binaryTree.getDeepestNode().value);
 		binaryTree.deleteDeepestNode();
 		binaryTree.levelOrder();
-		System.out.println(" ");
+		System.out.println();
 		binaryTree.deleteNode("N5");
 		binaryTree.levelOrder();
-		System.out.println(" ");
+		System.out.println();
 		binaryTree.deleteBT();
 		
 		// from here operation with the binaryTree array;
 		BinaryTree bt = initializeBinaryTree();
-		
+		System.out.println();
+		bt.preOrder(1);
+		System.out.println();
+
 	}
 	
 	private static BinaryTree initializeBinaryTree() {
-		BinaryTree bt = new BinaryTree(5);
+		BinaryTree bt = new BinaryTree(9);
 		bt.insert("N1");
 		bt.insert("N2");
 		bt.insert("N3");
 		bt.insert("N4");
 		bt.insert("N5");
 		bt.insert("N6");
+		bt.insert("N7");
+		bt.insert("N8");
+		bt.insert("N9");
 		return bt;
 	}
 	
