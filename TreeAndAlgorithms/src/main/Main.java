@@ -45,7 +45,12 @@ public class Main {
 		System.out.println();
 		bt.search("N12");
 		System.out.println();
-		
+
+		bt.delete("N12");
+		System.out.println();
+
+		bt.deleteBT();
+		System.out.println();
 	}
 	
 	private static BinaryTree initializeBinaryTree() {

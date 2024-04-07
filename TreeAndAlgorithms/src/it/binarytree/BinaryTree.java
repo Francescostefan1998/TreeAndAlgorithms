@@ -84,4 +84,13 @@ public class BinaryTree {
 		}
 	}
 	
+	public void deleteBT() {
+		try {
+			arr = null;
+			System.out.println("Bianry tree has been successfully deleted ");
+		} catch (Exception e) {
+			System.out.println("Errorn on deleting the tree");
+		}
+	}
+	
 }
