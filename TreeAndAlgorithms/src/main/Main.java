@@ -1,6 +1,7 @@
 package main;
 
 import it.binarytree.BinaryNode;
+import it.binarytree.BinaryTree;
 import it.binarytree.BinaryTreeLL;
 
 public class Main {
@@ -8,7 +9,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		BinaryTreeLL binaryTree = initializeTree();
+		BinaryTreeLL binaryTree = initializeTreeLL();
 		binaryTree.preOrder(binaryTree.root);
 		System.out.println(" ");
 		binaryTree.inOrder(binaryTree.root);
@@ -30,10 +31,25 @@ public class Main {
 		binaryTree.levelOrder();
 		System.out.println(" ");
 		binaryTree.deleteBT();
+		
+		// from here operation with the binaryTree array;
+		BinaryTree bt = initializeBinaryTree();
+		
+	}
+	
+	private static BinaryTree initializeBinaryTree() {
+		BinaryTree bt = new BinaryTree(5);
+		bt.insert("N1");
+		bt.insert("N2");
+		bt.insert("N3");
+		bt.insert("N4");
+		bt.insert("N5");
+		bt.insert("N6");
+		return bt;
 	}
 	
 	
-	private static BinaryTreeLL initializeTree(){
+	private static BinaryTreeLL initializeTreeLL(){
 		
 		BinaryTreeLL binaryTree = new BinaryTreeLL();
 		BinaryNode n1 = new BinaryNode();
