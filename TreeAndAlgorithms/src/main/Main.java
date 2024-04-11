@@ -1,5 +1,6 @@
 package main;
 
+import it.binarysearchtree.BinarySearchTree;
 import it.binarytree.BinaryNode;
 import it.binarytree.BinaryTree;
 import it.binarytree.BinaryTreeIterativeAlgorithms;
@@ -54,6 +55,8 @@ public class Main {
 		System.out.println();
 		// here some algorithms
 		bt.postOrderIterative(binaryTree.root);
+		BinarySearchTree bst = new BinarySearchTree();
+	
 	}
 	
 	private static BinaryTree initializeBinaryTree() {
