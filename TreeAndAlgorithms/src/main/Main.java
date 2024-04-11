@@ -56,7 +56,13 @@ public class Main {
 		// here some algorithms
 		bt.postOrderIterative(binaryTree.root);
 		BinarySearchTree bst = new BinarySearchTree();
-	
+		bst.insert(70);
+		bst.insert(50);
+		bst.insert(90);
+		bst.insert(10);
+		bst.insert(60);
+		bst.insert(50);
+		bst.insert(70);
 	}
 	
 	private static BinaryTree initializeBinaryTree() {
