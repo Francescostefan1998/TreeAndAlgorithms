@@ -1,5 +1,7 @@
 package it.binarytree;
 
+import java.util.Stack;
+
 public class BinaryTree {
 
 	String[] arr;
@@ -55,6 +57,40 @@ public class BinaryTree {
 		postOrder(2*index);
 		postOrder(2* index +1);
 		System.out.print(arr[index] + " ");
+	}
+	
+	public void postOrderIterative(BinaryNode root) {
+		// not working yet
+		Stack<BinaryNode> stack = new Stack<BinaryNode>();
+		BinaryNode current = root;
+		stack.push(current);
+		BinaryNode prev = null;
+		while(!stack.isEmpty()) {
+
+			while(current.left != null && current != prev) {
+				stack.push(current);
+				prev = current;
+				current = current.left;			
+			}
+			
+			while(current.right != null && current != prev) {
+				stack.push(current);
+				prev = current;
+				current = current.right;			
+			}
+			
+			// stack.push(current)
+;			BinaryNode node = stack.pop();
+			//current = node == prev ? stack.pop() : node;
+			// prev = current != prev ? current : prev;
+			System.out.print(node.left.value + " ");
+			System.out.print(node.right.value + " ");
+
+			
+			
+			
+						
+		}
 	}
 	
 	public void levelOrder() {

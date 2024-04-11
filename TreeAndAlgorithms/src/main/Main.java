@@ -2,6 +2,7 @@ package main;
 
 import it.binarytree.BinaryNode;
 import it.binarytree.BinaryTree;
+import it.binarytree.BinaryTreeIterativeAlgorithms;
 import it.binarytree.BinaryTreeLL;
 
 public class Main {
@@ -30,8 +31,8 @@ public class Main {
 		binaryTree.deleteNode("N5");
 		binaryTree.levelOrder();
 		System.out.println();
-		binaryTree.deleteBT();
-		
+		//binaryTree.deleteBT();
+	
 		// from here operation with the binaryTree array;
 		BinaryTree bt = initializeBinaryTree();
 		System.out.println();
@@ -51,6 +52,8 @@ public class Main {
 
 		bt.deleteBT();
 		System.out.println();
+		// here some algorithms
+		bt.postOrderIterative(binaryTree.root);
 	}
 	
 	private static BinaryTree initializeBinaryTree() {
