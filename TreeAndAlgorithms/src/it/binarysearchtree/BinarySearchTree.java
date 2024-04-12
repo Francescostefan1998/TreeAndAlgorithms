@@ -48,4 +48,14 @@ public class BinarySearchTree {
 		inOrder(node.right);
 	}
 	
+	public void postOrder(BinaryNode node) {
+		if(node == null) {
+			return;
+		}
+		inOrder(node.left);
+		inOrder(node.right);
+		System.out.print(node.value + " ");
+	}
+	
+	
 }
