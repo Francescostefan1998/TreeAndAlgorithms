@@ -2,7 +2,7 @@ package it.binarysearchtree;
 
 public class BinarySearchTree {
 
-	BinaryNode root;
+	public BinaryNode root;
 	
 	public BinarySearchTree() {
 		root = null;
@@ -14,7 +14,6 @@ public class BinarySearchTree {
 		if(currentNode == null) {
 			BinaryNode newNode = new BinaryNode();
 			newNode.value = value;
-			System.out.println("The value is inserted!");
 			return newNode;
 		} else if(value <= currentNode.value) {
 			currentNode.left = insert(currentNode.left, value);
@@ -27,9 +26,18 @@ public class BinarySearchTree {
 	}
 	
 	public void insert(int value) {
-		insert(root, value);
+		root = insert(root, value);
 	}
 	
+	public void preOrder(BinaryNode node) {
+		if(node == null) {
+			return;
+		}
+		System.out.println(node.value + " ");
+		preOrder(node.left);
+		
+		preOrder(node.right);
+	}
 	
 	
 }

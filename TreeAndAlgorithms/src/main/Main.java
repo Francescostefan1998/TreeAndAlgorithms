@@ -11,50 +11,50 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		BinaryTreeLL binaryTree = initializeTreeLL();
-		binaryTree.preOrder(binaryTree.root);
-		System.out.println();
-		binaryTree.inOrder(binaryTree.root);
-		System.out.println();
-		binaryTree.postOrder(binaryTree.root);
-		System.out.println();
-		binaryTree.levelOrder();
-		System.out.println();
-		binaryTree.search("N5");
-		binaryTree.insert("N10");
-		binaryTree.insert("N11");
-		binaryTree.levelOrder();
-		System.out.println();
-		System.out.println(binaryTree.getDeepestNode().value);
-		binaryTree.deleteDeepestNode();
-		binaryTree.levelOrder();
-		System.out.println();
-		binaryTree.deleteNode("N5");
-		binaryTree.levelOrder();
-		System.out.println();
-		//binaryTree.deleteBT();
-	
-		// from here operation with the binaryTree array;
-		BinaryTree bt = initializeBinaryTree();
-		System.out.println();
-		bt.preOrder(1);
-		System.out.println();
-		bt.inOrder(1);
-		System.out.println();
-		bt.postOrder(1);
-		System.out.println();
-		bt.levelOrder();
-		System.out.println();
-		bt.search("N12");
-		System.out.println();
-
-		bt.delete("N12");
-		System.out.println();
-
-		bt.deleteBT();
-		System.out.println();
-		// here some algorithms
-		bt.postOrderIterative(binaryTree.root);
+//		BinaryTreeLL binaryTree = initializeTreeLL();
+//		binaryTree.preOrder(binaryTree.root);
+//		System.out.println();
+//		binaryTree.inOrder(binaryTree.root);
+//		System.out.println();
+//		binaryTree.postOrder(binaryTree.root);
+//		System.out.println();
+//		binaryTree.levelOrder();
+//		System.out.println();
+//		binaryTree.search("N5");
+//		binaryTree.insert("N10");
+//		binaryTree.insert("N11");
+//		binaryTree.levelOrder();
+//		System.out.println();
+//		System.out.println(binaryTree.getDeepestNode().value);
+//		binaryTree.deleteDeepestNode();
+//		binaryTree.levelOrder();
+//		System.out.println();
+//		binaryTree.deleteNode("N5");
+//		binaryTree.levelOrder();
+//		System.out.println();
+//		//binaryTree.deleteBT();
+//	
+//		// from here operation with the binaryTree array;
+//		BinaryTree bt = initializeBinaryTree();
+//		System.out.println();
+//		bt.preOrder(1);
+//		System.out.println();
+//		bt.inOrder(1);
+//		System.out.println();
+//		bt.postOrder(1);
+//		System.out.println();
+//		bt.levelOrder();
+//		System.out.println();
+//		bt.search("N12");
+//		System.out.println();
+//
+//		bt.delete("N12");
+//		System.out.println();
+//
+//		bt.deleteBT();
+//		System.out.println();
+//		// here some algorithms
+		//bt.postOrderIterative(binaryTree.root);
 		BinarySearchTree bst = new BinarySearchTree();
 		bst.insert(70);
 		bst.insert(50);
@@ -63,6 +63,7 @@ public class Main {
 		bst.insert(60);
 		bst.insert(50);
 		bst.insert(70);
+		bst.preOrder(bst.root);
 	}
 	
 	private static BinaryTree initializeBinaryTree() {
