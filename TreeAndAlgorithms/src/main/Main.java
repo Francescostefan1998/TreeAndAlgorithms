@@ -64,6 +64,9 @@ public class Main {
 		bst.insert(50);
 		bst.insert(70);
 		bst.preOrder(bst.root);
+		System.out.println();
+		bst.inOrder(bst.root);
+
 	}
 	
 	private static BinaryTree initializeBinaryTree() {
