@@ -1,5 +1,9 @@
 package it.binarysearchtree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
 public class BinarySearchTree {
 
 	public BinaryNode root;
@@ -57,5 +61,24 @@ public class BinarySearchTree {
 		System.out.print(node.value + " ");
 	}
 	
+	
+	public void levelOrder() {
+		if(root == null) {
+			return;
+		}
+		Queue<BinaryNode> queue = new LinkedList<BinaryNode>(); 
+		queue.add(root);
+		while(!queue.isEmpty()) {
+			BinaryNode presentNode = queue.remove();
+			System.out.print(presentNode.value + " ");
+			if(presentNode.left != null) queue.add(presentNode.left);
+			if(presentNode.right != null) queue.add(presentNode.right);
+
+		}
+		
+		
+		
+		Stack<BinaryNode> stack = new Stack<BinaryNode>();
+	}
 	
 }

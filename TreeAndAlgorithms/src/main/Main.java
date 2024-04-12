@@ -68,6 +68,8 @@ public class Main {
 		bst.inOrder(bst.root);
 		System.out.println();
 		bst.postOrder(bst.root);
+		System.out.println();
+		bst.levelOrder();
 
 	}
 	
