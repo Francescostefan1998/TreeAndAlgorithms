@@ -95,7 +95,7 @@ public class BinarySearchTree {
 	
 	public BinaryNode minimumNode(BinaryNode root) {
 		if(root.left == null) {
-			return null;
+			return root;
 		} else {
 			return minimumNode(root.left);
 		}
