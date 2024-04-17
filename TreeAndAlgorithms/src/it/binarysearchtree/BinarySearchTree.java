@@ -110,7 +110,7 @@ public class BinarySearchTree {
 	    
 	    if(value < root.value) {
 	    	root.left = deleteNode(root.left, value);
-	    } else if(value < root.value) {
+	    } else if(value > root.value) {
 	    	root.right = deleteNode(root.right, value);
 	    } else {
 	    	if(root.left != null && root.right != null) {
