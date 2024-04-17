@@ -1,10 +1,13 @@
 package main;
 
+import java.math.BigDecimal;
+
 import it.binarysearchtree.BinarySearchTree;
 import it.binarytree.BinaryNode;
 import it.binarytree.BinaryTree;
 import it.binarytree.BinaryTreeIterativeAlgorithms;
 import it.binarytree.BinaryTreeLL;
+import it.converttobinary.Binary;
 
 public class Main {
 
@@ -70,6 +73,8 @@ public class Main {
 		bst.postOrder(bst.root);
 		System.out.println();
 		bst.levelOrder();
+		System.out.println();
+		bst.search(bst.root, 50);
 
 	}
 	

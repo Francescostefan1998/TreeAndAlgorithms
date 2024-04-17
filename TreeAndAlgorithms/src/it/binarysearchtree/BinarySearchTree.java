@@ -75,10 +75,39 @@ public class BinarySearchTree {
 			if(presentNode.right != null) queue.add(presentNode.right);
 
 		}
-		
-		
-		
-		Stack<BinaryNode> stack = new Stack<BinaryNode>();
 	}
+	
+	
+	public BinaryNode search(BinaryNode node, int value) {
+		if(node == null) {
+			System.out.println("Value "+ value + " not found in bst!");
+			return null;
+		} else if(node.value == value) {
+			System.out.println("Value "+ value + "  found in bst!");
+			return node;
+		} else if (value < node.value) {
+			return search(node.left, value);
+		} else {
+			return search(node.right, value);
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }
