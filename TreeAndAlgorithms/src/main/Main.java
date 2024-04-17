@@ -75,6 +75,10 @@ public class Main {
 		bst.levelOrder();
 		System.out.println();
 		bst.search(bst.root, 50);
+		System.out.println();
+		bst.deleteNode(bst.root, 10);
+		System.out.println();
+
 
 	}
 	

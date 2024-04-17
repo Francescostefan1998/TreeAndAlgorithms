@@ -93,6 +93,43 @@ public class BinarySearchTree {
 	}
 	
 	
+	public BinaryNode minimumNode(BinaryNode root) {
+		if(root.left == null) {
+			return null;
+		} else {
+			return minimumNode(root.left);
+		}
+	}
+	
+	
+	public BinaryNode deleteNode(BinaryNode root, int value) {
+	    if(root == null) {
+	    	System.out.println("Value "+ value + " not found in bst!");
+	    	return null;
+	    } 
+	    
+	    if(value < root.value) {
+	    	root.left = deleteNode(root.left, value);
+	    } else if(value < root.value) {
+	    	root.right = deleteNode(root.right, value);
+	    } else {
+	    	if(root.left != null && root.right != null) {
+	    		BinaryNode temp = root;
+	    		BinaryNode minNodeForRight = minimumNode(temp.right);
+	    		root.value = minNodeForRight.value;
+	    		root.right = deleteNode(root.right, minNodeForRight.value);
+	    	} else if(root.left != null) {
+	    		root = root.left;
+	    	} else if(root.right != null){
+	    		root = root.right;
+	    	} else {
+	    		root = null;
+	    	}
+	    	
+	    }
+	    
+	    return root;
+	}
 	
 	
 	
