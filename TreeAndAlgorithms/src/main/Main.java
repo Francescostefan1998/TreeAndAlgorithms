@@ -78,7 +78,9 @@ public class Main {
 		System.out.println();
 		bst.deleteNode(bst.root, 10);
 		System.out.println();
-
+		bst.deleteBST();
+		System.out.println();
+		bst.levelOrder();
 
 	}
 	

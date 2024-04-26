@@ -133,6 +133,11 @@ public class BinarySearchTree {
 	
 	
 	
+	public void deleteBST() {
+		root = null;
+		System.out.println("Successfully deleted!");
+	}
+	
 	
 	
 	
