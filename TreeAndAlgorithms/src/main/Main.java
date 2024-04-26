@@ -2,6 +2,7 @@ package main;
 
 import java.math.BigDecimal;
 
+import it.avltree.AVL;
 import it.binarysearchtree.BinarySearchTree;
 import it.binarytree.BinaryNode;
 import it.binarytree.BinaryTree;
@@ -57,31 +58,32 @@ public class Main {
 //		bt.deleteBT();
 //		System.out.println();
 //		// here some algorithms
-		//bt.postOrderIterative(binaryTree.root);
-		BinarySearchTree bst = new BinarySearchTree();
-		bst.insert(70);
-		bst.insert(50);
-		bst.insert(90);
-		bst.insert(10);
-		bst.insert(60);
-		bst.insert(50);
-		bst.insert(70);
-		bst.preOrder(bst.root);
-		System.out.println();
-		bst.inOrder(bst.root);
-		System.out.println();
-		bst.postOrder(bst.root);
-		System.out.println();
-		bst.levelOrder();
-		System.out.println();
-		bst.search(bst.root, 50);
-		System.out.println();
-		bst.deleteNode(bst.root, 10);
-		System.out.println();
-		bst.deleteBST();
-		System.out.println();
-		bst.levelOrder();
+//		//bt.postOrderIterative(binaryTree.root);
+//		BinarySearchTree bst = new BinarySearchTree();
+//		bst.insert(70);
+//		bst.insert(50);
+//		bst.insert(90);
+//		bst.insert(10);
+//		bst.insert(60);
+//		bst.insert(50);
+//		bst.insert(70);
+//		bst.preOrder(bst.root);
+//		System.out.println();
+//		bst.inOrder(bst.root);
+//		System.out.println();
+//		bst.postOrder(bst.root);
+//		System.out.println();
+//		bst.levelOrder();
+//		System.out.println();
+//		bst.search(bst.root, 50);
+//		System.out.println();
+//		bst.deleteNode(bst.root, 10);
+//		System.out.println();
+//		bst.deleteBST();
+//		System.out.println();
+//		bst.levelOrder();
 
+		AVL newAVL = new AVL();
 	}
 	
 	private static BinaryTree initializeBinaryTree() {
