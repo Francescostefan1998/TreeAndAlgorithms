@@ -60,7 +60,21 @@ public class AVL {
 				queue.add(toPrint.right);
 			}
 		}
-		
-		
 	}
+	
+	
+	public BinaryNodeAVL search(BinaryNodeAVL node, int value) {
+		if(node == null) {
+			System.out.println("Value: "+ value + " not found in the AVL tree");
+			return null;
+		} else if(node.value == value) {
+			System.out.println("Value: "+ value + " found in the AVL tree");
+			return node;
+		} else if(value < node.value) {
+			return search(node.left, value);
+		} else {
+			return search(node.right,value);
+		}
+	}
+
 }
