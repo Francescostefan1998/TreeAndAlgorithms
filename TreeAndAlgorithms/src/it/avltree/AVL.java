@@ -104,5 +104,54 @@ public class AVL {
 		return newRoot;
 	}
 	
+	public int getBalanced(BinaryNodeAVL node) {
+		if(node == null) {
+			return 0;
+		}
+		
+		return getHeight(node.left) - getHeight(node.right);
+	}
+	
+	private BinaryNodeAVL insertNode(BinaryNodeAVL node, int nodeValue) {
+		if(node == null) {
+			BinaryNodeAVL newNode = new BinaryNodeAVL();
+			newNode.value = nodeValue;
+			newNode.height = 1;
+			return newNode;
+		} else if(nodeValue < node.value) {
+			node.left = insertNode(node.left, nodeValue);
+		} else {
+			node.right = insertNode(node.right, nodeValue);
+		}
+	
+		node.height = 1 + Math.max(getHeight(node.left), getHeight(node.right));
+		int balance = getBalanced(node);
+		
+		if(balance > 1 && nodeValue < node.left.value) {
+			return rotateRight(node);
+		}
+		
+		if(balance > 1 && nodeValue < node.left.right.value) {
+			node.left = rotateLeft(node.left);
+			return rotateRight(node);
+		}
+		
+		if(balance < -1 && nodeValue > node.right.value) {
+			return rotateLeft(node);
+		}
+		
+		if(balance < -1 && nodeValue < node.right.value) {
+			node.right = rotateRight(node.right);
+			return rotateLeft(node);
+		}
+		
+		return node;
+	
+	}
+	
+	public void insert(int value) {
+		root = insertNode(root, value);
+	}
+	
 
 }

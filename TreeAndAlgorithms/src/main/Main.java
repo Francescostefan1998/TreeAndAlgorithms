@@ -84,6 +84,13 @@ public class Main {
 //		bst.levelOrder();
 
 		AVL newAVL = new AVL();
+		newAVL.insert(5);
+		newAVL.insert(10);
+		newAVL.insert(15);
+		newAVL.insert(20);
+		newAVL.insert(15);
+		newAVL.insert(7);
+		newAVL.levelOrder();
 	}
 	
 	private static BinaryTree initializeBinaryTree() {
