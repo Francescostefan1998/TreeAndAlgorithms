@@ -7,4 +7,9 @@ public class BinaryNodeAVL {
 	public int height;
 	public BinaryNodeAVL left;
 	public BinaryNodeAVL right;
+	
+	BinaryNodeAVL(){
+		this.height = 0;
+	}
+	
 }

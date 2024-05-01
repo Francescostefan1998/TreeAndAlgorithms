@@ -76,5 +76,33 @@ public class AVL {
 			return search(node.right,value);
 		}
 	}
+	
+	
+	public int getHeight(BinaryNodeAVL node) {
+		if(node == null) {
+			return 0;
+		}
+		return node.height;
+	}
+	
+	private BinaryNodeAVL rotateRight(BinaryNodeAVL disbalancedNode) {
+		BinaryNodeAVL newRoot = disbalancedNode.left;
+		disbalancedNode.left = disbalancedNode.left.right;
+		newRoot.right = disbalancedNode;
+		disbalancedNode.height = 1 + Math.max(getHeight(disbalancedNode.left), getHeight(disbalancedNode.right));
+		newRoot.height = 1 + Math.max(getHeight(newRoot.left), getHeight(newRoot.right));
+		return newRoot;
+	}
+	
+	
+	private BinaryNodeAVL rotateLeft(BinaryNodeAVL disbalancedNode) {
+		BinaryNodeAVL newRoot = disbalancedNode.right;
+		disbalancedNode.right = disbalancedNode.right.left;
+		newRoot.left = disbalancedNode;
+		disbalancedNode.height = 1 + Math.max(getHeight(disbalancedNode.left), getHeight(disbalancedNode.right));
+		newRoot.height = 1 + Math.max(getHeight(newRoot.left), getHeight(newRoot.right));
+		return newRoot;
+	}
+	
 
 }
