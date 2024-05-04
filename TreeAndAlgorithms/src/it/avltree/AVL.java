@@ -227,6 +227,11 @@ public class AVL {
 	}
 	
 	
+	public void deleteAVL() {
+		root = null;
+		System.out.println("The AVL has been successfully deleted!");
+	}
+	
 	
 
 }

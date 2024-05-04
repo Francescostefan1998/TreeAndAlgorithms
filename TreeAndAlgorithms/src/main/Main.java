@@ -1,14 +1,10 @@
 package main;
 
-import java.math.BigDecimal;
-
 import it.avltree.AVL;
-import it.binarysearchtree.BinarySearchTree;
+import it.binaryheap.BinaryHeap;
 import it.binarytree.BinaryNode;
 import it.binarytree.BinaryTree;
-import it.binarytree.BinaryTreeIterativeAlgorithms;
 import it.binarytree.BinaryTreeLL;
-import it.converttobinary.Binary;
 
 public class Main {
 
@@ -96,6 +92,8 @@ public class Main {
 
 		newAVL.levelOrder();
 		System.out.println();
+		
+		BinaryHeap bh = new BinaryHeap(5);
 	}
 	
 	private static BinaryTree initializeBinaryTree() {
