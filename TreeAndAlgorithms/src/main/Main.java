@@ -91,6 +91,11 @@ public class Main {
 		newAVL.insert(15);
 		newAVL.insert(7);
 		newAVL.levelOrder();
+		System.out.println();
+		newAVL.delete(5);
+
+		newAVL.levelOrder();
+		System.out.println();
 	}
 	
 	private static BinaryTree initializeBinaryTree() {
