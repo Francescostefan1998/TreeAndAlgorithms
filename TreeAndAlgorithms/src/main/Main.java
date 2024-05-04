@@ -94,6 +94,8 @@ public class Main {
 		System.out.println();
 		
 		BinaryHeap bh = new BinaryHeap(5);
+		bh.peek();
+		bh.levelOrder();
 	}
 	
 	private static BinaryTree initializeBinaryTree() {
