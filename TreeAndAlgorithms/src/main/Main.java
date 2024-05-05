@@ -96,6 +96,14 @@ public class Main {
 		BinaryHeap bh = new BinaryHeap(5);
 		bh.peek();
 		bh.levelOrder();
+		bh.insert(10, "Min");
+		bh.insert(5, "Min");
+		bh.insert(15, "Min");
+		bh.insert(1, "Min");
+		bh.insert(19, "Min");
+		bh.levelOrder();
+		
+	
 	}
 	
 	private static BinaryTree initializeBinaryTree() {
