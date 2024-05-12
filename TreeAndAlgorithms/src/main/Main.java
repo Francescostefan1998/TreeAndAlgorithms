@@ -115,6 +115,8 @@ public class Main {
 //		bh.extractHeadOfBP("Max");
 		
 		Trie newTrie = new Trie();
+		newTrie.insert("API");
+		newTrie.insert("APE");
 	
 	}
 	
