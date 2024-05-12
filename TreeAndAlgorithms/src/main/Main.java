@@ -5,6 +5,7 @@ import it.binaryheap.BinaryHeap;
 import it.binarytree.BinaryNode;
 import it.binarytree.BinaryTree;
 import it.binarytree.BinaryTreeLL;
+import it.trie.Trie;
 
 public class Main {
 
@@ -79,32 +80,32 @@ public class Main {
 //		System.out.println();
 //		bst.levelOrder();
 
-		AVL newAVL = new AVL();
-		newAVL.insert(5);
-		newAVL.insert(10);
-		newAVL.insert(15);
-		newAVL.insert(20);
-		newAVL.insert(15);
-		newAVL.insert(7);
-		newAVL.levelOrder();
-		System.out.println();
-		newAVL.delete(5);
-
-		newAVL.levelOrder();
-		System.out.println();
-		
-		BinaryHeap bh = new BinaryHeap(5);
-		bh.peek();
-		bh.levelOrder();
-		bh.insert(10, "Min");
-		bh.insert(5, "Min");
-		bh.insert(15, "Min");
-		bh.insert(1, "Min");
-		bh.insert(19, "Min");
-		bh.levelOrder();
-		bh.extractHeadOfBP("Min");
-		bh.levelOrder();
-		bh.delteEntireBH();
+//		AVL newAVL = new AVL();
+//		newAVL.insert(5);
+//		newAVL.insert(10);
+//		newAVL.insert(15);
+//		newAVL.insert(20);
+//		newAVL.insert(15);
+//		newAVL.insert(7);
+//		newAVL.levelOrder();
+//		System.out.println();
+//		newAVL.delete(5);
+//
+//		newAVL.levelOrder();
+//		System.out.println();
+//		
+//		BinaryHeap bh = new BinaryHeap(5);
+//		bh.peek();
+//		bh.levelOrder();
+//		bh.insert(10, "Min");
+//		bh.insert(5, "Min");
+//		bh.insert(15, "Min");
+//		bh.insert(1, "Min");
+//		bh.insert(19, "Min");
+//		bh.levelOrder();
+//		bh.extractHeadOfBP("Min");
+//		bh.levelOrder();
+//		bh.delteEntireBH();
 //		bh.insert(10, "Max");
 //		bh.insert(5, "Max");
 //		bh.insert(15, "Max");
@@ -113,7 +114,7 @@ public class Main {
 //		bh.levelOrder();
 //		bh.extractHeadOfBP("Max");
 		
-		
+		Trie newTrie = new Trie();
 	
 	}
 	
