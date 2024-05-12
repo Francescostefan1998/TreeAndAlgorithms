@@ -67,9 +67,70 @@ public class BinaryHeap {
 	}
 	
 	
+	public void heapifyTopToBottom(int index, String heapType) {
+		int left = index*2;
+		int right = index*2 +1;
+		int swapChild = 0;
+		if(sizeOfTree < left) {
+			return;
+		}
+		if(heapType=="Max") {
+			if(sizeOfTree == left) {
+				if(arr[index] < arr[left]) {
+					int tmp = arr[index];
+					arr[index] = arr[left];
+					arr[left] = tmp;
+				}
+				return;
+			} else {
+				if(arr[left] > arr[right]) {
+					swapChild = left;
+				} else {
+					swapChild = right;
+				}
+				if(arr[index] < arr[swapChild]) {
+					int tmp = arr[index];
+					arr[index] = arr[left];
+					arr[left] = tmp;
+				
+				}
+			}
+		} else if(heapType=="Min") {
+			if(sizeOfTree == left) {
+				if(arr[index] > arr[left]) {
+					int tmp = arr[index];
+					arr[index] = arr[left];
+					arr[left] = tmp;
+				}
+				return;
+			} else {
+				if(arr[left] < arr[right]) {
+					swapChild = left;
+				} else {
+					swapChild = right;
+				}
+				if(arr[index] > arr[swapChild]) {
+					int tmp = arr[index];
+					arr[index] = arr[left];
+					arr[left] = tmp;
+				
+				}
+			}
+		}
+		heapifyTopToBottom(swapChild, heapType);
+	}
 	
-	
-	
+	public int extractHeadOfBP(String heapType) {
+		if(isEmpty()) {
+			return -1;
+		} else {
+			int extractedValue = arr[1];
+			arr[1] = arr[sizeOfTree];
+			sizeOfTree--;
+			heapifyTopToBottom(1,heapType);
+			return extractedValue;
+		}
+	}
 	
 	
 }
