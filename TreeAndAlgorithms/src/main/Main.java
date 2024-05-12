@@ -116,8 +116,11 @@ public class Main {
 		
 		Trie newTrie = new Trie();
 		newTrie.insert("API");
-		newTrie.insert("APE");
-	
+		newTrie.insert("APIS");
+		newTrie.search("AD");
+		newTrie.search("API");
+		newTrie.search("AP");
+		
 	}
 	
 	private static BinaryTree initializeBinaryTree() {
