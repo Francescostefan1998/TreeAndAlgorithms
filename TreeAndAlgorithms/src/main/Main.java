@@ -104,7 +104,7 @@ public class Main {
 		bh.levelOrder();
 		bh.extractHeadOfBP("Min");
 		bh.levelOrder();
-
+		bh.delteEntireBH();
 //		bh.insert(10, "Max");
 //		bh.insert(5, "Max");
 //		bh.insert(15, "Max");

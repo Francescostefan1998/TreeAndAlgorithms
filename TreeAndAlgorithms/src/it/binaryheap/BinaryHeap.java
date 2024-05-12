@@ -132,5 +132,10 @@ public class BinaryHeap {
 		}
 	}
 	
+	public void delteEntireBH() {
+		arr = null;
+		System.out.println("BH has been successfully deleted");
+	}
+	
 	
 }
