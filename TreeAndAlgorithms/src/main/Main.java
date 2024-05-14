@@ -120,7 +120,8 @@ public class Main {
 		newTrie.search("AD");
 		newTrie.search("API");
 		newTrie.search("AP");
-		
+		newTrie.delete("APIS");
+		newTrie.search("APIS");
 	}
 	
 	private static BinaryTree initializeBinaryTree() {
